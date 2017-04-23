@@ -1,0 +1,10 @@
+{
+	"name": "TheList",
+	"version": "0.1.0",
+	"title": "The List",
+	"author": "phodge",
+	"contact": "https://github.com/phodge/factorio-thelist",
+	"homepage": "https://github.com/phodge/factorio-thelist",
+	"description": "Can you supply everything on The List?",
+	"factorio_version": "0.14"
+}
