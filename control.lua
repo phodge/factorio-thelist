@@ -7,7 +7,7 @@ local ZONE_SURFACE = "nauvis"
 -- I don't know if the factorio API actually exports this anywhere
 local TICKS_PER_SECOND = 60
 
-local DISPLAY_SIZE = 2
+local DISPLAY_SIZE = 10
 local RED = {r=1}
 local ORANGE = {r=1, g=0.5}
 local YELLOW = {r=1, g=1}
