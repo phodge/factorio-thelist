@@ -2,7 +2,8 @@ require "thelist"
 
 
 local COLLECTOR_TYPE = "thelist-collector"
-local ZONE_SIZE = 15
+local ZONE_SIZE = 100
+local SPAWN_RADIUS = 25
 local ZONE_SURFACE = "nauvis"
 -- I don't know if the factorio API actually exports this anywhere
 local TICKS_PER_SECOND = 60
@@ -117,8 +118,8 @@ end
 
 
 local function spawn_collector(surface, force)
-  local rand_x = math.random(5,ZONE_SIZE)
-  local rand_y = math.random(5,ZONE_SIZE)
+  local rand_x = math.random(5, SPAWN_RADIUS)
+  local rand_y = math.random(5, SPAWN_RADIUS)
   if math.random() <= 0.5 then
     rand_x = rand_x * -1
   end
