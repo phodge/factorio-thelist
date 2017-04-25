@@ -240,7 +240,7 @@ end
 
 function update_tally(refresh_points)
   -- find all of the collection points on the map
-  if refresh_points then
+  if refresh_points or not POINTS then
     local surface = game.surfaces[ZONE_SURFACE]
     local tl = {-2-ZONE_SIZE,-2-ZONE_SIZE}
     local br = {2+ZONE_SIZE,2+ZONE_SIZE}
