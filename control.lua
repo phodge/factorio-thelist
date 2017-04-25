@@ -319,10 +319,9 @@ script.on_event(defines.events.on_player_created, function(event)
 end)
 
 script.on_load(function()
-	-- a map has been loaded which already has this mod active.
-  -- FIXME: what do we use instead of this?
+  -- a map has been loaded which already has this mod active.
   if global.mod_active then
-    -- we just need to add the event hooks and GUI again
+    -- we just need to add the event hooks
     add_hooks()
   end
 end)
