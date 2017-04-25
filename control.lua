@@ -259,22 +259,24 @@ function update_tally(refresh_points)
   end
 
   for _, ent in pairs(POINTS) do
-    local inv = ent.get_inventory(defines.inventory.chest)
-    for item, qty in pairs(inv.get_contents()) do
-      if lookfor[item] then
-        -- take stuff out of the container and put it towards the goal
-        local goal = lookfor[item][1]
+    if ent.valid then
+      local inv = ent.get_inventory(defines.inventory.chest)
+      for item, qty in pairs(inv.get_contents()) do
+        if lookfor[item] then
+          -- take stuff out of the container and put it towards the goal
+          local goal = lookfor[item][1]
 
-        local remove = qty
-        if remove > goal then
-          remove = goal
-        end
+          local remove = qty
+          if remove > goal then
+            remove = goal
+          end
 
-        if remove then
-          -- remove the items
-          inv.remove({name=item, count=remove})
-          -- update the goal
-          lookfor[item][1] = goal - remove
+          if remove > 0 then
+            -- remove the items
+            inv.remove({name=item, count=remove})
+            -- update the goal
+            lookfor[item][1] = goal - remove
+          end
         end
       end
     end
