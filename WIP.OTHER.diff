@@ -1,0 +1,39 @@
+diff --git a/control.lua b/control.lua
+index 6814fe6..0fb645a 100644
+--- a/control.lua
++++ b/control.lua
+@@ -16,9 +16,10 @@ local GREEN = {g=1}
+ 
+ -- 5 minutes added to the timer each time an item is added
+ local PER_ROUND = 5
++local PER_ROUND = 6
+ 
+ -- you get an additional 5 minutes grace time when the game starts
+-local STARTING_GRACE = 1
++local STARTING_GRACE = 2
+ 
+ local POINTS = nil
+ 
+diff --git a/thelist.lua b/thelist.lua
+index 9a79a0f..cb0fd7a 100644
+--- a/thelist.lua
++++ b/thelist.lua
+@@ -10,16 +10,15 @@ function what_is_the_list()
+   L[1+#L] = {"stone-brick",     200}
+   L[1+#L] = {"copper-plate",    250}
+   L[1+#L] = {"iron-plate",      500}
+-  -- I hope you were getting your steel production underway!
+ 
+   -- basic recipes
+   L[1+#L] = {"iron-stick",          100}
+   L[1+#L] = {"iron-gear-wheel",     250}
+   L[1+#L] = {"burner-inserter",     500}
+   L[1+#L] = {"pipe",                1000}
+-  L[1+#L] = {"pipe-to-ground",      1000}
++  L[1+#L] = {"pipe-to-ground",      250}
+   L[1+#L] = {"copper-cable",        3000}
+-  L[1+#L] = {"raw-wood"             250}
++  L[1+#L] = {"raw-wood",            250}
+   L[1+#L] = {"wood",                250}
+   L[1+#L] = {"wooden-chest",        500}
+   L[1+#L] = {"small-electric-pole", 1000}
